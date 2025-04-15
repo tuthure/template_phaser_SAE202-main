@@ -1,4 +1,4 @@
-game.objective_kill_them_all=true
+game.objective_kill_them_all=false
 game.objective_collect_all_items=true
 game.objective_reach_destination=true
 game.objective_complete_in_time=true
