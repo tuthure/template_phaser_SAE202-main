@@ -50,7 +50,6 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
             case 5:
                 this.lifePoints = 5;
                 this.speed = 0;
-                this.setTint("0x0000FF");
             default:
                 this.lifePoints = 1;
         }
