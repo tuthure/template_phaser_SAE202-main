@@ -16,7 +16,7 @@ export default class credits extends Phaser.Scene {
 
     const screen_welcome = this.add.image(this.game.config.width/2, this.game.config.height/2, "screen_credits"); // Réglez la valeur selon vos besoins
 
-    const button_back = this.add.image(1040, 630, "button_back"); // Réglez la valeur selon vos besoins
+    const button_back = this.add.image(1140, 630, "button_back"); // Réglez la valeur selon vos besoins
     
 
     
