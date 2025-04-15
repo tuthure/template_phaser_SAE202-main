@@ -17,9 +17,9 @@ export default class accueil extends Phaser.Scene {
     const screen_welcome = this.add.image(this.game.config.width/2, this.game.config.height/2, "screen_welcome"); // Réglez la valeur selon vos besoins
 
     var arrayButtons =[];
-    const bouton_credits = this.add.image(this.game.config.width/2, 600, "button_credits"); // Réglez la valeur selon vos besoins
-    const bouton_controls = this.add.image(this.game.config.width/2, 500, "button_controls"); // Réglez la valeur selon vos besoins
-    const bouton_play = this.add.image(this.game.config.width/2, 400, "button_play"); // Réglez la valeur selon vos besoins
+    const bouton_credits = this.add.image(this.game.config.width/2 + 200, 600, "button_credits"); // Réglez la valeur selon vos besoins
+    const bouton_controls = this.add.image(this.game.config.width/2 - 200, 600, "button_controls"); // Réglez la valeur selon vos besoins
+    const bouton_play = this.add.image(this.game.config.width/2 + 10, 400, "button_play"); // Réglez la valeur selon vos besoins
     
     var arrayButtons =[bouton_credits,bouton_controls, bouton_play];
 
