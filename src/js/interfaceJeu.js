@@ -51,7 +51,7 @@ export default class interfaceJeu extends Phaser.Scene {
 
         // zone des vies
         this.livesText = this.add.text(0, 0, 'Vies:          X ' + this.getPlayerLife(), { fontFamily: 'Arial', fontSize: 24, color: '#ffffff' });
-        var liveSprite = this.add.sprite(0, 0, 'player_move_right_SS').setOrigin(1, 0);
+        var liveSprite = this.add.sprite(0, 0, 'player_stand_right_spritesheet').setOrigin(1, 0);
         this.livesText.setOrigin(1, 0);
         this.livesText.setPosition(this.sys.game.config.width - 30, 18);
         liveSprite.setPosition(this.sys.game.config.width - 75, 0);
