@@ -1581,6 +1581,90 @@
                  "width":0,
                  "x":1368.36363636364,
                  "y":3599.90909090909
+                }, 
+                {
+                 "height":0,
+                 "id":72,
+                 "name":"portal",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"style",
+                         "type":"string",
+                         "value":"grand"
+                        }, 
+                        {
+                         "name":"target",
+                         "type":"int",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":2019.66666666667,
+                 "y":901.333333333333
+                }, 
+                {
+                 "height":0,
+                 "id":73,
+                 "name":"portal",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"style",
+                         "type":"string",
+                         "value":"grand"
+                        }, 
+                        {
+                         "name":"target",
+                         "type":"int",
+                         "value":3
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":2205.66666666667,
+                 "y":905.333333333333
+                }, 
+                {
+                 "height":0,
+                 "id":74,
+                 "name":"portal",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":4
+                        }, 
+                        {
+                         "name":"style",
+                         "type":"string",
+                         "value":"grand"
+                        }, 
+                        {
+                         "name":"target",
+                         "type":"int",
+                         "value":4
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":2369.66666666667,
+                 "y":903.333333333333
                 }],
          "offsetx":0.33333333333326,
          "offsety":0.6666666666667,
@@ -1636,90 +1720,6 @@
                  "width":154,
                  "x":1211.63636363636,
                  "y":3128.42424242424
-                }, 
-                {
-                 "height":0,
-                 "id":69,
-                 "name":"portal",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"id",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"style",
-                         "type":"string",
-                         "value":"grand"
-                        }, 
-                        {
-                         "name":"target",
-                         "type":"int",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":2084.66666666667,
-                 "y":855.333333333333
-                }, 
-                {
-                 "height":0,
-                 "id":70,
-                 "name":"portal",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"id",
-                         "type":"int",
-                         "value":3
-                        }, 
-                        {
-                         "name":"style",
-                         "type":"string",
-                         "value":"grand"
-                        }, 
-                        {
-                         "name":"target",
-                         "type":"int",
-                         "value":3
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":2270.66666666667,
-                 "y":859.333333333333
-                }, 
-                {
-                 "height":0,
-                 "id":71,
-                 "name":"portal",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"id",
-                         "type":"int",
-                         "value":4
-                        }, 
-                        {
-                         "name":"style",
-                         "type":"string",
-                         "value":"grand"
-                        }, 
-                        {
-                         "name":"target",
-                         "type":"int",
-                         "value":4
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":2434.66666666667,
-                 "y":857.333333333333
                 }],
          "offsetx":-6.66666666666674,
          "offsety":42.6666666666667,
@@ -1730,7 +1730,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":72,
+ "nextobjectid":75,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
