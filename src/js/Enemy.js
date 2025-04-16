@@ -75,14 +75,14 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         // ennemy type 3 : saut aléatoire
         if (this.type == 3) {
             this.monTimer = this.scene.time.addEvent({
-                delay: Phaser.Math.Between(2000, 6000), // ms
+                delay: Phaser.Math.Between(2000, 6000),
                 callback: function () {
+                    if (!this.active || !this.body) return; // Protection si l'ennemi est détruit
                     if (this.isJumping == false) {
                         this.setVelocityY(-250);
                         this.isJumping = true;
                     }
                 },
-                args: [],
                 callbackScope: this,
                 repeat: -1
             });
@@ -232,8 +232,11 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
     decreaseHealthPoints() {
         this.lifePoints--;
         if (this.lifePoints == 0) {
-            if (this.type == 2) {
+            if (this.type == 2 && this.timerShoot) {
                 this.timerShoot.remove();
+            }
+            if (this.type == 3 && this.monTimer) {
+                this.monTimer.remove();
             }
             this.destroy();
         }
