@@ -1082,8 +1082,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":7348,
-                 "y":1664
+                 "x":1332,
+                 "y":2136
                 }, 
                 {
                  "height":0,
@@ -1132,6 +1132,111 @@
                  "width":0,
                  "x":1161.33333333333,
                  "y":3876
+                }, 
+                {
+                 "height":0,
+                 "id":55,
+                 "name":"enemy_5",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":9836,
+                 "y":2416
+                }, 
+                {
+                 "height":0,
+                 "id":56,
+                 "name":"target",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":9248,
+                 "y":2432
+                }, 
+                {
+                 "height":0,
+                 "id":57,
+                 "name":"item",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":8368,
+                 "y":2432
+                }, 
+                {
+                 "height":0,
+                 "id":58,
+                 "name":"powerUp",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"item_description",
+                         "type":"string",
+                         "value":"La hauteur de vos sauts est\nl\u00e9g\u00e8rement augment\u00e9e"
+                        }, 
+                        {
+                         "name":"item_effect",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"item_name",
+                         "type":"string",
+                         "value":"les Bottes de saut"
+                        }, 
+                        {
+                         "name":"item_type",
+                         "type":"string",
+                         "value":"jump"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":176,
+                 "y":2024
+                }, 
+                {
+                 "height":0,
+                 "id":59,
+                 "name":"enemy_4",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"destination",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1624,
+                 "y":1368
+                }, 
+                {
+                 "height":0,
+                 "id":60,
+                 "name":"destination",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":808,
+                 "y":1952
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1140,7 +1245,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":55,
+ "nextobjectid":61,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
