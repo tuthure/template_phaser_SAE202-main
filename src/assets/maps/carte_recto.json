@@ -1668,7 +1668,7 @@
          "name":"text_layer",
          "objects":[
                 {
-                 "height":39,
+                 "height":46,
                  "id":38,
                  "name":"text",
                  "properties":[
@@ -1682,16 +1682,16 @@
                     {
                      "bold":true,
                      "color":"#ffffff",
-                     "fontfamily":"Lucida Grande",
-                     "pixelsize":11,
+                     "fontfamily":"Segoe UI",
+                     "pixelsize":19,
                      "text":"W pour int\u00e9ragir",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":132,
-                 "x":1625.90909090909,
-                 "y":394.21212121212
+                 "width":159,
+                 "x":1606.90909090909,
+                 "y":375.21212121212
                 }, 
                 {
                  "height":153,
