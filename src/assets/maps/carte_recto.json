@@ -1668,7 +1668,7 @@
          "name":"text_layer",
          "objects":[
                 {
-                 "height":26,
+                 "height":39,
                  "id":38,
                  "name":"text",
                  "properties":[
@@ -1683,17 +1683,17 @@
                      "bold":true,
                      "fontfamily":"Lucida Grande",
                      "pixelsize":11,
-                     "text":"",
+                     "text":"W pour int\u00e9ragir",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":105,
-                 "x":662.909090909094,
-                 "y":2805.21212121212
+                 "width":132,
+                 "x":1625.90909090909,
+                 "y":394.21212121212
                 }, 
                 {
-                 "height":52,
+                 "height":153,
                  "id":40,
                  "name":"zone",
                  "properties":[
@@ -1705,9 +1705,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":154,
-                 "x":859.63636363636,
-                 "y":2798.42424242424
+                 "width":91,
+                 "x":1768.63636363636,
+                 "y":377.42424242424
                 }],
          "offsetx":-6.66666666666674,
          "offsety":42.6666666666667,
