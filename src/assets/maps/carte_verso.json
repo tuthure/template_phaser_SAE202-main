@@ -1152,7 +1152,7 @@
                         {
                          "name":"id_text",
                          "type":"int",
-                         "value":6
+                         "value":19
                         }],
                  "rotation":0,
                  "type":"",
@@ -1195,7 +1195,7 @@
                         {
                          "name":"id",
                          "type":"int",
-                         "value":5
+                         "value":18
                         }],
                  "rotation":0,
                  "text":
@@ -1221,7 +1221,7 @@
                         {
                          "name":"id_text",
                          "type":"int",
-                         "value":6
+                         "value":18
                         }],
                  "rotation":0,
                  "type":"",
@@ -1333,8 +1333,8 @@
                  "type":"",
                  "visible":true,
                  "width":159,
-                 "x":184.136363636364,
-                 "y":3791.60606060606
+                 "x":192.136363636364,
+                 "y":3792.60606060606
                 }, 
                 {
                  "height":153,
