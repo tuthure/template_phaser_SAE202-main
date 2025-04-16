@@ -36,22 +36,22 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         // personnalisation des points de vie
         switch (this.type) {
             case 1:
-                this.lifePoints = 2;
+                this.lifePoints = 3;
                 break;
             case 2:
                 this.lifePoints = 3;
                 break;
             case 3:
-                this.lifePoints = 5;
+                this.lifePoints = 2;
                 break;
             case 4:
-                this.lifePoints = 5;
+                this.lifePoints = 3;
                 break;
             case 5:
-                this.lifePoints = 5;
+                this.lifePoints = 15;
                 this.speed = 0;
             default:
-                this.lifePoints = 1;
+                this.lifePoints = 2;
         }
         // Autres initialisations ou logique spécifique au joueur
 
