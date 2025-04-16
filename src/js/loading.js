@@ -172,7 +172,7 @@ imgFilesName.forEach(fileName => {
                 this.anims.create({
                     key: 'anim_' + ssname,
                     frames: this.anims.generateFrameNumbers(ssname + '_SS', { start: 0, end: configFile[ssname].nbFrames - 1 }),
-                    frameRate: 10
+                    frameRate: 7
                 });
                 console.log("creation de l'animation " + 'anim_' + ssname + " avec  " + configFile[ssname].nbFrames + " frames");
             }
