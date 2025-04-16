@@ -252,6 +252,7 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         ) {
             // Créer le projectile
             var projectile = this.scene.physics.add.sprite(this.x, this.y, 'bullet');
+            projectile.setDepth(200)
             this.scene.grp_bullet_enemy.add(projectile);
             projectile.body.allowGravity = false;
             projectile.setVelocityX(this.projectileSpeed); // Définir la vitesse du projectile
