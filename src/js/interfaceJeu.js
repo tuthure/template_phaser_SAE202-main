@@ -62,7 +62,7 @@ export default class interfaceJeu extends Phaser.Scene {
         }
         // zone des item 
         if (this.objectives["collect_all_items"]) {
-            this.itemText = this.add.text(850, 18, 'Items collectés : ' + this.playerProperties.itemsCollected + '/' + this.items_to_collect, { fontFamily: 'futura', fontSize: 32, color: '#ff0000' });
+            this.itemText = this.add.text(850, 18, 'Items collectés : ' + this.playerProperties.itemsCollected + '/' + this.items_to_collect, { fontFamily: 'Arial', fontSize: 24, color: '#ffffff' });
         }
         // affichage alignés en vertical
         if (this.objectives["kill_them_all"] && this.objectives["collect_all_items"]) {
