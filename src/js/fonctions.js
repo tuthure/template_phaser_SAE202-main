@@ -200,12 +200,11 @@ export function onKillLayer(victim, kill_layer) {
 export function portalSpawning() {
     var interfaceScene = this.scene.get('interfaceJeu');
     this.player.healthPoints = interfaceScene.playerHealth;
-    console.log('spwan sur potail : ' + this.player.healthPoints + " point de vie   ");
+   
     var portalFound = false;
 
     this.grp_portal.children.iterate(function (portal) {
-        console.log("portail analyse : " + portal.id + " cible :" + this.game.config.portalTarget);
-
+        // Vérifier si le portail a été trouvé
         if (portal.id == this.game.config.portalTarget) {
             this.spawnPoint.x = portal.x;
             this.spawnPoint.y = portal.y;
@@ -213,6 +212,7 @@ export function portalSpawning() {
             this.player.y = portal.y;
             this.game.config.portalTarget = null;
             portalFound = true;
+            interfaceScene.switchLevel();
             return true;
         }
     }, this);
@@ -248,10 +248,15 @@ export function printMsg(player, zone) {
 }
 
 // creation du fond et du fond parallax
-export function backgroundCreation(background_image_key, parallax_background_image_key) {
+export function backgroundCreation( background_image_key,  resultFixed, parallax_background_image_key) {
     if (this.textures.exists(background_image_key)) {
-        this.background_image = this.add.image(this.game.config.width / 2, this.game.config.height / 2, background_image_key);
-      //  this.background_image.setScrollFactor(0);
+       if (resultFixed == false) {
+         this.background_image = this.add.image(0,0, background_image_key).setOrigin(0, 0);   
+       }
+       else {
+            this.background_image = this.add.image(this.game.config.width / 2, this.game.config.height / 2, background_image_key);
+             this.background_image.setScrollFactor(0);
+       }
     }
     if (this.textures.exists(parallax_background_image_key)) {
         this.fond = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, parallax_background_image_key).setOrigin(0, 0);
@@ -277,12 +282,12 @@ export function groupsCreation() {
 //creation des calques usuels : affichage et collision
 export function commonLayersCreation() {
     // creation des layers
-    this.background_layer = this.map.createLayer("background_layer", this.tileset, 0, 0);
-    this.background_2_layer = this.map.createLayer("background_2_layer", this.tileset, 0, 0);
-    this.platform_layer = this.map.createLayer("platform_layer", this.tileset, 0, 0);
+    this.background_layer = this.map.createLayer("background_layer", [this.tileset, this.tileset_extra], 0, 0);
+    this.background_2_layer = this.map.createLayer("background_2_layer", [this.tileset, this.tileset_extra], 0, 0);
+    this.platform_layer = this.map.createLayer("platform_layer", [this.tileset, this.tileset_extra], 0, 0);
+    this.decoration_front_layer = this.map.createLayer("decoration_front_layer", [this.tileset, this.tileset_extra], 0, 0);
+    this.decoration_back_layer = this.map.createLayer("decoration_back_layer", [this.tileset, this.tileset_extra], 0, 0);
    
-    this.decoration_front_layer = this.map.createLayer("decoration_front_layer", this.tileset, 0, 0);
-    this.decoration_back_layer = this.map.createLayer("decoration_back_layer", this.tileset, 0, 0);
     // gestion des profondeurs
     this.background_layer.setDepth(10);
     this.background_2_layer.setDepth(20);
@@ -295,7 +300,7 @@ export function commonLayersCreation() {
 //creation du calque de mort : perte de tous ses points de vie en cas de contact
 export function deathLayerCreation() {
     if (this.map.getLayer("death_layer") != null) {
-        this.death_layer = this.map.createLayer('death_layer', this.tileset, 0, 0);
+        this.death_layer = this.map.createLayer('death_layer', [this.tileset, this.tileset_extra], 0, 0);
         this.death_layer.setDepth(45);
         this.death_layer.setCollisionByExclusion(-1);
         this.physics.add.overlap(this.player, this.death_layer, onDeathLayer, checkLayoutOverlapWithTiles, this);
@@ -307,7 +312,7 @@ export function deathLayerCreation() {
 //creation du calque de kill : perte d'un point de vie en cas de contact
 export function killLayerCreation() {
     if (this.map.getLayer("kill_layer") != null) {
-        this.kill_layer = this.map.createLayer('kill_layer', this.tileset, 0, 0);
+        this.kill_layer = this.map.createLayer('kill_layer', [this.tileset, this.tileset_extra], 0, 0);
         this.kill_layer.setDepth(45);
         this.kill_layer.setCollisionByExclusion(-1);
         this.physics.add.overlap(this.player, this.kill_layer, onKillLayer, checkLayoutOverlapWithTiles, this);

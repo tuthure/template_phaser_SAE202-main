@@ -36,10 +36,15 @@ imgFilesName.forEach(fileName => {
 
         /* nous ne chargeons que les textures mais pas sous forme de spritesheet, nous les découpons apres */
         this.load.image('player_move_right', './src/assets/spritesheets/player_move_right_spritesheet.png');
-        this.load.image('player2_move_right', './src/assets/spritesheets/player2_move_right_spritesheet.png');
         this.load.image('player_jump_right', './src/assets/spritesheets/player_jump_right_spritesheet.png');
         this.load.image('player_shoot_right', './src/assets/spritesheets/player_shoot_right_spritesheet.png');
         this.load.image('player_stand_right', './src/assets/spritesheets/player_stand_right_spritesheet.png');
+       
+        this.load.image('player_verso_move_right', './src/assets/spritesheets/player_verso_move_right_spritesheet.png');
+        this.load.image('player_verso_jump_right', './src/assets/spritesheets/player_verso_jump_right_spritesheet.png');
+        this.load.image('player_verso_shoot_right', './src/assets/spritesheets/player_verso_shoot_right_spritesheet.png');
+        this.load.image('player_verso_stand_right', './src/assets/spritesheets/player_verso_stand_right_spritesheet.png');
+       
         this.load.image('enemy_1_move_right', './src/assets/spritesheets/enemy_1_move_right_spritesheet.png');
         this.load.image('enemy_2_move_right', './src/assets/spritesheets/enemy_2_move_right_spritesheet.png');
         this.load.image('enemy_3_move_right', './src/assets/spritesheets/enemy_3_move_right_spritesheet.png');
@@ -94,14 +99,17 @@ imgFilesName.forEach(fileName => {
         this.load.audio("son_bullet", "src/assets/sounds/son_bullet.mp3");
         this.load.audio("son_jump", "src/assets/sounds/son_jump.mp3");
         this.load.audio("son_item", "src/assets/sounds/son_item.mp3");
-        //this.load.audio("son_game_over", "src/assets/sounds/son_game_over.mp3");
-       // this.load.audio("son_win", "src/assets/sounds/son_win.mp3");
-       // this.load.audio("son_background", "src/assets/sounds/son_background.mp3");
+        this.load.audio("son_game_over", "src/assets/sounds/son_game_over.mp3");
+        this.load.audio("son_win", "src/assets/sounds/son_win.mp3");
+        this.load.audio("son_game", "src/assets/sounds/son_game.mp3");
+       this.load.audio("son_intro", "src/assets/sounds/son_intro.mp3");
       
         /* chargement des cartes */
         this.load.tilemapTiledJSON('map_recto', './src/assets/maps/carte_recto.json');
         this.load.tilemapTiledJSON('map_verso', './src/assets/maps/carte_verso.json');
         this.load.image('tileset_image', './src/assets/maps/tileset_image.png');
+        this.load.image('tileset_image_extra', './src/assets/maps/tileset_image_extra.png');
+
     }
     create() {
         // chargement des caractéristiques du player
@@ -140,6 +148,18 @@ imgFilesName.forEach(fileName => {
             }
             else this.game.config.objective_complete_in_time = false;
             
+            // Chargement des fonds d'écran totaux pour recto et verso
+            if (typeof (configFile["game"].fixedBackgroundRecto) != 'undefined' && configFile["game"].fixedBackgroundRecto == "true") {
+                this.game.config.fixedBackgroundRecto = true;
+            } else {
+                this.game.config.fixedBackgroundRecto = false;
+            }
+
+            if (typeof (configFile["game"].fixedBackgroundVerso) != 'undefined' && configFile["game"].fixedBackgroundVerso == "true") {
+                this.game.config.fixedBackgroundVerso = true;
+            } else {
+                this.game.config.fixedBackgroundVerso = false;
+            }
 
             console.log("objectifs chargés :");
             console.log("- kill them all : " + this.game.config.objective_kill_them_all);
@@ -153,11 +173,14 @@ imgFilesName.forEach(fileName => {
 
 
         // chargement et calcul des dimensions du spritesheet player_move_right
-        var SpriteSheetNamesTable = ["player_move_right", "player2_move_right", "player_jump_right", "player_stand_right", "player_shoot_right", "enemy_1_move_right", "enemy_2_move_right", "enemy_2_shoot_right", "enemy_3_move_right", "enemy_3_jump_right", "enemy_4_move_right", "enemy_5_move_right", "projectile_player"];
+        var SpriteSheetNamesTable = ["player_move_right", "player_jump_right", "player_stand_right", "player_shoot_right",
+                                    "player_verso_move_right", "player_verso_jump_right", "player_verso_stand_right", "player_verso_shoot_right",
+         "enemy_1_move_right", "enemy_2_move_right", "enemy_2_shoot_right", "enemy_3_move_right", "enemy_3_jump_right", "enemy_4_move_right", "enemy_5_move_right", "projectile_player"];
         this.game.config.ss = [];
         SpriteSheetNamesTable.forEach(function (ssname, index) {
+            // si la texture a ete chargée
             if (this.textures.exists(ssname)) {
-
+                console.log("trouvé " + ssname)
                 this.game.config.ss[ssname] = {};
                 console.log(ssname + ">" + this.game.config.ss[ssname]);
                 
@@ -176,6 +199,9 @@ imgFilesName.forEach(fileName => {
                 });
                 console.log("creation de l'animation " + 'anim_' + ssname + " avec  " + configFile[ssname].nbFrames + " frames");
             }
+            else {
+                console.log ("non trouvé " + ssname);
+            }
         }, this);
 
        // Test pour afficher les noms des fichiers item_to_collect_*** chargés
@@ -185,12 +211,50 @@ imgFilesName.forEach(fileName => {
         this.game.config.default_gravity = this.physics.world.gravity.y;
 
         // ajout des sons
-        this.game.config.son_bullet = this.sound.add("son_bullet");
-        this.game.config.son_jump = this.sound.add("son_jump");
-        this.game.config.son_item = this.sound.add("son_item");
-        //this.game.config.son_game_over = this.sound.add("son_game_over");
-        //this.game.config.son_win = this.sound.add("son_win");
+
+        if (this.cache.audio.exists("son_bullet")) {
+            this.game.config.son_bullet = this.sound.add("son_bullet");
+        } else {
+            console.warn("Audio file 'son_bullet' not loaded properly.");
+        }
+        if (this.cache.audio.exists("son_jump")) {
+            this.game.config.son_jump = this.sound.add("son_jump");
+        } else {
+            console.warn("Audio file 'son_jump' not loaded properly.");
+        }
+        if (this.cache.audio.exists("son_item")) {
+            this.game.config.son_item = this.sound.add("son_item");
+        } else {
+            console.warn("Audio file 'son_item' not loaded properly.");
+        }
+
+        if (this.cache.audio.exists("son_game")) {
+            this.game.config.son_game = this.sound.add("son_game");
+        }
+        else {
+            console.warn("Audio file 'son_game' not loaded properly.");
+        }
+        if (this.cache.audio.exists("son_game_over")) {
+            this.game.config.son_game_over = this.sound.add("son_game_over");
+        } else {
+            console.warn("Audio file 'son_game_over' not loaded properly.");
+        }
+        if (this.cache.audio.exists("son_win")) {
+            this.game.config.son_win = this.sound.add("son_win");
+        } else {
+            console.warn("Audio file 'son_win' not loaded properly.");
+        }
+        if (this.cache.audio.exists("son_game")) {
+            this.game.config.son_game = this.sound.add("son_game");
+        } else {
+            console.warn("Audio file 'son_game' not loaded properly.");
+        }
         
+          if (this.cache.audio.exists("son_intro")) {
+            this.game.config.son_game = this.sound.add("son_intro");
+        } else {
+            console.warn("Audio file 'son_intro' not loaded properly.");
+        }
 
         // chargement des scenes
         this.scene.add('accueil', accueil, false);
@@ -227,8 +291,11 @@ imgFilesName.forEach(fileName => {
                 remainingMonsters++;
             }
             if (point.name == "item") {
-                if (typeof (point.properties) == 'undefined') {
+                if (typeof (point.properties) == 'undefined' || point.properties[0].name != "type") {
                 remainingItems++;
+            }
+            else {
+                console.log(point.properties)
             }
             }
         }, this);

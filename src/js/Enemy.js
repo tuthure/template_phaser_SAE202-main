@@ -15,7 +15,6 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         if (this.type !== 5) {
             this.setScale(0.75);
         }
-
         // Physique du joueur
         scene.physics.world.enable(this); // Active la physique pour le joueur
         this.body.setCollideWorldBounds(true); // Empêche le joueur de sortir des limites du monde
@@ -40,7 +39,7 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         // personnalisation des points de vie
         switch (this.type) {
             case 1:
-                this.lifePoints = 3;
+                this.lifePoints = 4;
                 break;
             case 2:
                 this.lifePoints = 3;
@@ -52,10 +51,11 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
                 this.lifePoints = 3;
                 break;
             case 5:
-                this.lifePoints = 20;
+                this.lifePoints = 10;
                 this.speed = 0;
+                break;
             default:
-                this.lifePoints = 20;
+                this.lifePoints = 1;
         }
         // Autres initialisations ou logique spécifique au joueur
 
@@ -259,7 +259,6 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         ) {
             // Créer le projectile
             var projectile = this.scene.physics.add.sprite(this.x, this.y, 'bullet');
-            projectile.setDepth(200)
             this.scene.grp_bullet_enemy.add(projectile);
             projectile.body.allowGravity = false;
             projectile.setVelocityX(this.projectileSpeed); // Définir la vitesse du projectile

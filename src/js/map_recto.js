@@ -32,9 +32,10 @@ export default class map_recto extends Phaser.Scene {
     this.map = this.make.tilemap({ key: 'map_recto' });
     // Ajouter le jeu de tuiles à la carte
     this.tileset = this.map.addTilesetImage('tileset_image', 'tileset_image');
+   this.tileset_extra = this.map.addTilesetImage('tileset_image_extra', 'tileset_image_extra');
 
     // creation du background + background parallax  
-    fct.backgroundCreation.call(this, "main_background", "main_background_over_parallax_effect");
+    fct.backgroundCreation.call(this, "main_background", this.game.config.fixedBackgroundRecto, "main_background_over_parallax_effect");
     //creation des calques usuels
     fct.commonLayersCreation.call(this);
     // creation du kill_layer et du death_layer
@@ -186,6 +187,15 @@ export default class map_recto extends Phaser.Scene {
 
     }
     this.game.config.sceneTarget = "recto";
+    // lecture du son
+      if (this.sound.get("son_intro")) {
+      this.sound.stopByKey("son_intro");
+    }
+     if (!this.sound.get('son_game')) {
+            console.warn("Le son 'son_game' n'est pas chargé dans la scène.");
+        } else {
+          this.sound.play('son_game', { loop: true });
+        }
 
   }
 
