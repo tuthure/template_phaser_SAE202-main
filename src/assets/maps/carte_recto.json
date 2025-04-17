@@ -1314,7 +1314,7 @@
                         {
                          "name":"item_type",
                          "type":"string",
-                         "value":"doubleJump"
+                         "value":"item_double_jump"
                         }],
                  "rotation":0,
                  "type":"",
@@ -1358,6 +1358,96 @@
                  "width":0,
                  "x":5332.87878787879,
                  "y":3670.48484848485
+                }, 
+                {
+                 "height":0,
+                 "id":85,
+                 "name":"enemy_4",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"destination",
+                         "type":"int",
+                         "value":25
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":4813.66666666667,
+                 "y":3121.33333333333
+                }, 
+                {
+                 "height":0,
+                 "id":86,
+                 "name":"destination",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":25
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":5219.66666666667,
+                 "y":3055.33333333333
+                }, 
+                {
+                 "height":0,
+                 "id":87,
+                 "name":"enemy_4",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"destination",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":4519.66666666667,
+                 "y":2229.33333333333
+                }, 
+                {
+                 "height":0,
+                 "id":88,
+                 "name":"destination",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":5065.66666666667,
+                 "y":2217.33333333333
+                }, 
+                {
+                 "height":0,
+                 "id":89,
+                 "name":"item",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"hearth"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":59.6666666666661,
+                 "y":531.333333333333
                 }],
          "offsetx":0.33333333333326,
          "offsety":0.6666666666667,
@@ -1553,7 +1643,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":85,
+ "nextobjectid":90,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
