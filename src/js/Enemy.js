@@ -259,6 +259,7 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         ) {
             // Créer le projectile
             var projectile = this.scene.physics.add.sprite(this.x, this.y, 'bullet');
+            projectile.setDepth(200);
             this.scene.grp_bullet_enemy.add(projectile);
             projectile.body.allowGravity = false;
             projectile.setVelocityX(this.projectileSpeed); // Définir la vitesse du projectile
@@ -290,8 +291,8 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
             yoyo: true // Inverser l'animation (pour que le sprite clignote)
         });
 
-        // Timer pour revenir à l'état normal après 1.5 secondes
-        this.scene.time.delayedCall(1500, () => {
+        // Timer pour revenir à l'état normal après X millisecondes
+        this.scene.time.delayedCall(250, () => {
             this.invincible = false;
             this.clearTint();
             this.alpha = 1; // Remettre l'opacité à 100%

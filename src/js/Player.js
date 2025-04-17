@@ -247,7 +247,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             yoyo: true // Inverser l'animation (pour que le sprite clignote)
         });
         // Timer pour revenir à l'état normal après 3 secondes
-        this.scene.time.delayedCall(3000, () => {
+        this.scene.time.delayedCall(1500, () => {
             this.invincible = false;
             this.clearTint();
             this.alpha = 1; // Remettre l'opacité à 100%
