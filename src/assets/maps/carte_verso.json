@@ -1295,7 +1295,7 @@
                         {
                          "name":"id",
                          "type":"int",
-                         "value":61
+                         "value":41
                         }],
                  "rotation":0,
                  "text":
@@ -1321,7 +1321,7 @@
                         {
                          "name":"id_text",
                          "type":"int",
-                         "value":61
+                         "value":41
                         }],
                  "rotation":0,
                  "type":"",
@@ -1338,7 +1338,7 @@
                         {
                          "name":"id",
                          "type":"int",
-                         "value":70
+                         "value":42
                         }],
                  "rotation":0,
                  "text":
@@ -1365,7 +1365,7 @@
                         {
                          "name":"id_text",
                          "type":"int",
-                         "value":70
+                         "value":42
                         }],
                  "rotation":0,
                  "type":"",
