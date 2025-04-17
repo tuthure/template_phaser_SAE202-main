@@ -15,6 +15,9 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         if (this.type !== 5) {
             this.setScale(0.75);
         }
+        if (this.type == 5) {
+            this.setScale(3);
+        }
         // Physique du joueur
         scene.physics.world.enable(this); // Active la physique pour le joueur
         this.body.setCollideWorldBounds(true); // Empêche le joueur de sortir des limites du monde
