@@ -1320,8 +1320,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":5269.66666666667,
-                 "y":2189.33333333333
+                 "x":5267,
+                 "y":2188
                 }, 
                 {
                  "height":0,
@@ -1729,6 +1729,49 @@
                  "width":159,
                  "x":8009.16666666667,
                  "y":1890.33333333333
+                }, 
+                {
+                 "height":153,
+                 "id":101,
+                 "name":"zone",
+                 "properties":[
+                        {
+                         "name":"id_text",
+                         "type":"int",
+                         "value":66
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":91,
+                 "x":4558.49666666667,
+                 "y":3642.83333333333
+                }, 
+                {
+                 "height":46,
+                 "id":102,
+                 "name":"text",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":66
+                        }],
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "color":"#ffffff",
+                     "fontfamily":"Segoe UI",
+                     "pixelsize":19,
+                     "text":"W pour interagir",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":159,
+                 "x":4523.16666666667,
+                 "y":3653.67333333333
                 }],
          "offsetx":-6.66666666666674,
          "offsety":42.6666666666667,
@@ -1739,7 +1782,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":98,
+ "nextobjectid":103,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
