@@ -1286,93 +1286,6 @@
                  "width":0,
                  "x":1228,
                  "y":3892
-                }, 
-                {
-                 "height":46,
-                 "id":75,
-                 "name":"text",
-                 "properties":[
-                        {
-                         "name":"id",
-                         "type":"int",
-                         "value":41
-                        }],
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "color":"#ffffff",
-                     "fontfamily":"Segoe UI",
-                     "pixelsize":19,
-                     "text":"W pour interagir",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":159,
-                 "x":6468.5,
-                 "y":3798.288
-                }, 
-                {
-                 "height":153,
-                 "id":76,
-                 "name":"zone",
-                 "properties":[
-                        {
-                         "name":"id_text",
-                         "type":"int",
-                         "value":41
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":91,
-                 "x":6502.23,
-                 "y":3779.5
-                }, 
-                {
-                 "height":55,
-                 "id":83,
-                 "name":"text",
-                 "properties":[
-                        {
-                         "name":"id",
-                         "type":"int",
-                         "value":42
-                        }],
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "color":"#ff0000",
-                     "fontfamily":"Segoe UI",
-                     "halign":"center",
-                     "pixelsize":19,
-                     "text":"Objet de qu\u00eate r\u00e9cup\u00e9r\u00e9",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":142,
-                 "x":9698.33333333333,
-                 "y":3791.56166666667
-                }, 
-                {
-                 "height":113,
-                 "id":84,
-                 "name":"zone",
-                 "properties":[
-                        {
-                         "name":"id_text",
-                         "type":"int",
-                         "value":42
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":126,
-                 "x":9704.06333333333,
-                 "y":3820.77166666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1698,6 +1611,93 @@
                  "width":126,
                  "x":639.73,
                  "y":3821.105
+                }, 
+                {
+                 "height":55,
+                 "id":85,
+                 "name":"text",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":42
+                        }],
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "color":"#ff0000",
+                     "fontfamily":"Segoe UI",
+                     "halign":"center",
+                     "pixelsize":19,
+                     "text":"Objet de qu\u00eate r\u00e9cup\u00e9r\u00e9",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":142,
+                 "x":9698.33333333333,
+                 "y":3795.56166666667
+                }, 
+                {
+                 "height":113,
+                 "id":86,
+                 "name":"zone",
+                 "properties":[
+                        {
+                         "name":"id_text",
+                         "type":"int",
+                         "value":42
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":126,
+                 "x":9704.06333333333,
+                 "y":3824.77166666667
+                }, 
+                {
+                 "height":46,
+                 "id":87,
+                 "name":"text",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":41
+                        }],
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "color":"#ffffff",
+                     "fontfamily":"Segoe UI",
+                     "pixelsize":19,
+                     "text":"W pour interagir",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":159,
+                 "x":6464.5,
+                 "y":3798.29
+                }, 
+                {
+                 "height":153,
+                 "id":88,
+                 "name":"zone",
+                 "properties":[
+                        {
+                         "name":"id_text",
+                         "type":"int",
+                         "value":41
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":91,
+                 "x":6498.23,
+                 "y":3779.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1706,7 +1706,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":85,
+ "nextobjectid":89,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
