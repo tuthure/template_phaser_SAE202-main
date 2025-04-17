@@ -65,7 +65,7 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
         // Créer un timer pour gérer les tirs aléatoires
         // cas du type ennemi 2 : 
         if (this.type == 2) {
-            this.projectileSpeed = 300;
+            this.projectileSpeed = 400;
             this.timerShoot = this.scene.time.addEvent({
                 delay: Phaser.Math.Between(1000, 3000), // Délai aléatoire initial entre les tirs
                 callback: this.fireBullet,
