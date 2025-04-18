@@ -48,7 +48,7 @@ export default class Enemy extends Phaser.Physics.Arcade.Sprite {
                 this.lifePoints = 2;
                 break;
             case 3:
-                this.lifePoints = 3;
+                this.lifePoints = 4;
                 break;
             case 4:
                 this.lifePoints = 5;
